@@ -16,7 +16,9 @@ const Chat = ({ username }) => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, document.body.scrollHeight);
+    document
+      .getElementById("messagesList")
+      .scrollTo(0, document.getElementById("messagesList").scrollHeight);
   }, [messages]);
 
   useEffect(() => {
@@ -30,12 +32,14 @@ const Chat = ({ username }) => {
   }, []);
 
   return (
-    <div className="container mx-auto">
-      <h1 className="container fixed bg-slate-800 text-center text-2xl font-bold">
+    <div className="container flex h-screen flex-col">
+      <h1 className="container absolute bg-slate-800 text-center text-2xl font-bold">
         App React Socket
       </h1>
-
-      <ul className="flex flex-col gap-5 py-10 font-semibold">
+      <ul
+        className="flex flex-1 flex-col gap-5 overflow-y-scroll py-10 font-semibold"
+        id="messagesList"
+      >
         {messages.map(({ message, username: usernameMessage }, index) => {
           if (usernameMessage === username) {
             return (
@@ -59,15 +63,12 @@ const Chat = ({ username }) => {
         })}
       </ul>
 
-      <form
-        onSubmit={handleSubmit}
-        className="container absolute bottom-0 flex text-black"
-      >
+      <form onSubmit={handleSubmit} className="container flex text-black">
         <input
           type="text"
           autoComplete="off"
           value={message}
-          className="w-full rounded-xl bg-gray-200 px-5"
+          className="w-full flex-1 rounded-xl bg-gray-200 px-5"
           onChange={(e) => setMessage(e.target.value)}
         />
         <button

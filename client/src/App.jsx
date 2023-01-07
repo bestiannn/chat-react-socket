@@ -17,6 +17,7 @@ const App = () => {
       )}
       {usernameReady && <Chat username={username} />}
     </div>
+    // <ChatNew />
   );
 };
 
