@@ -7,7 +7,7 @@ const App = () => {
   const [usernameReady, setUsernameReady] = useState(false);
 
   return (
-    <div className="relative flex min-h-screen overflow-hidden bg-slate-800 text-white">
+    <div className="flex min-h-screen bg-slate-800 text-white">
       {!usernameReady && (
         <Login
           setUsernameReady={setUsernameReady}

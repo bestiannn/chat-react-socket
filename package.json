@@ -5,8 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "npm run build && node server/index.js",
     "dev": "nodemon server/index.js",
+    "dev:client": "npm run --prefix client dev",
     "build": "npm run --prefix client build"
   },
   "keywords": [],
