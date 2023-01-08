@@ -2,8 +2,12 @@
 
 A real-time chat application built with React and Node.js.
 
+<div style="text-align:center">
+
 ![screenshot1](./.github/screenshot1.png)
 ![screenshot2](./.github/screenshot2.png)
+
+</div>
 
 ## Installation
 
@@ -35,4 +39,3 @@ To build the client app for production and run the server, run:
 ```bash
 npm run start
 ```
-
