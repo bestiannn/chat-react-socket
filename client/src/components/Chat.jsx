@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-// const socket = io("http://localhost:3000");
 const socket = io();
+// const socket = io("http://localhost:3000"); // if you want to connect to a specific server or its in dev mode uncomment this line
 
 const Chat = ({ username }) => {
   const [message, setMessage] = useState("");
@@ -32,7 +32,7 @@ const Chat = ({ username }) => {
   }, []);
 
   return (
-    <div className="container flex h-screen flex-col">
+    <div className="container flex h-screen flex-col mx-auto">
       <h1 className="container absolute bg-slate-800 text-center text-2xl font-bold">
         App React Socket
       </h1>
@@ -55,7 +55,7 @@ const Chat = ({ username }) => {
           return (
             <li
               key={index}
-              className="max-w-md rounded-t-2xl rounded-r-2xl bg-slate-400 px-5 py-1"
+              className="max-w-md rounded-t-2xl rounded-r-2xl bg-sky-500 px-5 py-1"
             >
               {usernameMessage}: {message}
             </li>
