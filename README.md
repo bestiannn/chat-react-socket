@@ -2,18 +2,15 @@
 
 A real-time chat application built with React and Node.js.
 
-<p align="center">
-
-![screenshot1](./.github/screenshot1.png)
-
-</p>
-
 
 <p align="center">
-
-![screenshot2](./.github/screenshot2.png)
-
+    <img src="./.github/screenshot1.png" />
 </p>
+
+<p align="center">
+    <img src="./.github/screenshot2.png" />
+</p>
+
 
 ## Installation
 
